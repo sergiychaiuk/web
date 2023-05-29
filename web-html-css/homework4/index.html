@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>homework4</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">JOURNEY</div>
+      <div class="nav">
+        <div class="icon-group">
+          <a href="#" class="icon calendar"></a>
+          <a href="#" class="icon forum"></a>
+          <a href="#" class="icon journey"></a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="auth">Welcome, <a href="#">Log In</a> or <a href="#">Sign Up</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <form action="#" type="POST">
+      <div class="title">
+        <div class="title__text">Sign Up</div>
+        <a href="#" class="title__link">Log In</a>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn facebook" type="button">
+          <div class="btn__icon">
+            <img src="img/facebook.png" alt="facebook">
+          </div>
+          <div class="btn__text">Facebook</div>
+        </button>
+
+        <button class="btn google" type="button">
+          <div class="btn__icon">
+            <img src="img/G+.png" alt="G+">
+          </div>
+          <div class="btn__text">Google</div>
+        </button>
+      </div>
+
+      <div class="divider">
+        <div class="divider__text">or</div>
+      </div>
+
+      <div class="input">
+        <input type="text" id="first-name" placeholder="First Name"/>
+      </div>
+
+      <div class="input">
+        <input type="text" id="last-name" placeholder="Last Name"/>
+      </div>
+
+      <div class="input">
+        <input type="email" id="email" placeholder="Email"/>
+      </div>
+
+      <div class="input">
+        <input type="password" id="choose-password" placeholder="Choose Password"/>
+      </div>
+
+      <div class="input">
+        <input type="password" id="confirm-password" placeholder="Confirm Password"/>
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="checkbox__text">Agree our <a href="#">Terms & Conditions</a></div>
+      </label>
+
+      <button type="submit" class="btn create" onclick="event.preventDefault();">
+        <div class="btn__text">Create Account</div>
+      </button>
+    </form>
+  </main>
+</body>
+</html>

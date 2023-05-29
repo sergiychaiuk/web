@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>homework8</title>
+
+  <style>
+    .input-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .input-container input {
+      border: 1px solid #ccc;
+      padding: 5px;
+      width: 200px;
+    }
+
+    .input-container input:focus {
+      outline: green solid 3px;
+    }
+
+    .input-container input.error {
+      outline: red solid 3px;
+      color: red;
+    }
+
+    .input-container .price-span {
+      display: inline-block;
+      border: 1px solid green;
+      color: green;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+
+    .input-container .price-span button {
+      margin-left: 5px;
+      border-radius: 50%;
+      border: 1px solid green;
+      background: none;
+    }
+    .input-container span.error {
+      display: inline-block;
+      margin-top: 5px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div class="input-container">
+  <input type="number" id="priceInput" placeholder="Price">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url('img/rana-sawalha-364253-unsplash.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1210px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 1.125rem 0;
+}
+header:after {
+    content: '';
+    position: absolute;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #000000;
+    opacity: 0.41;
+
+    z-index: 1;
+}
+header .logo,
+header .nav {
+    z-index: 2;
+}
+header .logo {
+    color: #3cb878;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+header .nav {
+    display: flex;
+    align-items: center;
+}
+header .nav .icon-group {}
+header .nav .icon-group .icon {
+    display: inline-block;
+    background-image: url('img/sprite.png');
+    margin-right: 1.75rem;
+}
+header .nav .icon-group .icon:last-child {
+    margin-right: 0;
+}
+header .nav .icon-group .calendar {
+    width: 19px;
+    height: 19px;
+    background-position: -48px -0;
+}
+header .nav .icon-group .forum {
+    width:28px;
+    height:20px;
+    background-position: 0 -0;
+}
+header .nav .icon-group .journey {
+    width: 20px;
+    height: 20px;
+    background-position: -28px -0;
+}
+header .nav .divider {
+    display: inline-block;
+
+    margin: 0 1.5rem;
+
+    height: 19px;
+    width: 1px;
+
+    background-color: #434343;
+}
+header .nav .auth {
+    font-size: 0.875rem;
+    color: #ffffff;
+}
+header .nav .auth a {
+    color: #3cb878;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1 1 auto;
+}
+main form {
+    position: relative;
+
+    padding: 1.875rem 3.75rem;
+
+    max-width: 27.625rem;
+    width: 100%;
+
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+main form:before {
+    content: '';
+    position: absolute;
+
+    top: 2.0625rem;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #3cb878;
+}
+main form .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 0.9375rem;
+}
+main form .title .title__text {
+    color: #434343;
+    font-size: 1.25rem;
+}
+main form .title .title__link {
+    color: #3cb878;
+    font-size: 0.875rem;
+    text-decoration: underline;
+}
+main form .btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+.btn .btn__icon {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 2.9375rem;
+    width: 100%;
+}
+.btn .btn__icon img {
+    display: inline-block;
+}
+.btn .btn__icon:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -1px;
+
+    width: 1px;
+    height: 28px;
+
+    background-color: #000000;
+
+    opacity: 0.1;
+}
+.btn .btn__text {
+    width: 100%;
+
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+}
+.facebook, .google, .create {
+    min-height: 2.875rem;
+    width: 100%;
+    height: 100%;
+}
+.facebook, .google {
+    max-width: 9.8125rem;
+}
+.facebook {
+    background-color: #264b96;
+}
+.google {
+    background-color: #c3412c;
+}
+.create {
+    background-color: #329a65;
+}
+
+main form .divider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2.0625rem 0 1.125rem 0;
+}
+main form .divider .divider__text {
+    margin: 0 1.125rem;
+
+    color: #848484;
+    font-size: 0.875rem;
+    line-height: 8px;
+
+    transform: translateY(-20%);
+}
+main form .divider:before {
+    content: '';
+    display: block;
+
+    height: 1px;
+    width: 100%;
+
+    background-color: #eaeaea;
+}
+main form .divider:after {
+    content: '';
+    display: block;
+
+    height: 1px;
+    width: 100%;
+
+    background-color: #eaeaea;
+}
+
+main form .input {
+    margin-bottom: 9px;
+}
+main form .input input {
+    padding: 0 1.1875rem;
+
+    min-height: 46px;
+    height: 100%;
+    width: 100%;
+
+    color: #434343;
+    font-size: 0.875rem;
+    line-height: 10px;
+
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+
+    transition: all 300ms ease;
+}
+/*main form .input input:hover,*/
+main form .input input:focus {
+    border: 1px solid transparent;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.21);
+}
+main form .input input::placeholder {
+    color: #bebebe;
+}
+
+main form .checkbox {
+    display: flex;
+    align-items: center;
+
+    margin: 1.1875rem 0 1.5625rem 0;
+
+    color: #434343;
+    font-size: 0.875rem;
+}
+main form .checkbox input[type="checkbox"] {
+    display: grid;
+    place-content: center;
+    margin-right: 0.625rem;
+
+    appearance: none;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+}
+main form .checkbox input[type="checkbox"]::before {
+    content: "";
+    display: inline-block;
+
+    width: 14px;
+    height: 11px;
+
+    clip-path: polygon(85.14% 0.91%, 98.56% 17.96%, 42.78% 88.81%, 2.87% 37.99%, 16.19% 21.11%, 42.68% 54.85%, 42.71% 54.8%);
+    background-color: #3cb878;
+
+    transform: scale(0);
+}
+
+main form .checkbox input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+main form .checkbox .checkbox__text {}
+main form .checkbox a {
+    color: #3cb878;
+    text-decoration: underline;
+}

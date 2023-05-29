@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework7</title>
+
+    <style>
+        ul {
+            list-style: none;
+            margin-left: 1em;
+            border-left: 1px solid #ccc;
+            padding-left: 1em;
+        }
+
+        ul li {
+            margin: 0.5em 0;
+            padding-left: 1em;
+            position: relative;
+        }
+
+        ul li:before {
+            content: '';
+            position: absolute;
+            left: -1em;
+            top: 0.5em;
+            border-top: 1px solid #ccc;
+            width: 0.5em;
+        }
+
+        #timer {
+            font-size: 1.5em;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+<ul id="list"></ul>
+<div id="timer"></div>
+
+<script>
+    const array = ["hello", "world", [{name: "Sergiy", age: 21}, "object"], {name: "Sergiy", age: 21}];
+
+    const list = document.getElementById("list");
+    const timer = document.getElementById("timer");
+
+    function renderList(arr) {
+        return arr.map(item => {
+            if (Array.isArray(item)) {
+                return `<li><ul>${renderList(item)}</ul></li>`;
+            } else if (typeof item === "object") {
+                return `<li><ul>${renderList(Object.values(item))}</ul></li>`;
+            } else {
+                return `<li>${item}</li>`;
+            }
+        }).join("");
+    }
+
+    list.innerHTML = renderList(array);
+
+    let timeLeft = 10;
+    let countdown = setInterval(() => {
+        timer.textContent = `Clear the page after ${timeLeft--} second(s).`;
+
+        if (timeLeft < 0) {
+            document.body.innerHTML = "";
+            clearInterval(countdown);
+        }
+    }, 1000);
+</script>
+</body>
+</html>
